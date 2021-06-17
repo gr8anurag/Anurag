@@ -1,0 +1,52 @@
+import java.util.*;
+
+class Fibonacci
+{
+    int n1,n2,n3,limit;
+   
+    Fibonacci(int n)
+    {   
+        limit = n;
+        n1=0;
+        n2=1;
+    }   
+   
+    void series()
+    {
+        System.out.println("The Fibonacci Series up to "+ limit +" are:");
+        System.out.print(n1+" "+n2+" ");
+        int i;
+        for(i=3;i<=limit;i++)
+        {
+            n3=n1+n2;
+            System.out.print(n3+" ");
+            n1=n2;
+            n2=n3;
+        }
+    }
+}
+
+class Main
+{
+    public static void main(String ahlam[])
+    {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the Limit");
+        int n = sc.nextInt();
+        Fibonacci f= new Fibonacci(n);
+        f.series();
+    }   
+}
+	}
+}
+
+public class Ex1 {
+	public static void main(String[] args) {
+		Thread ta = new Thread(new Ex1RunnerA());		
+		Thread tb = new Thread(new Ex1RunnerB());		
+		Thread tc = new Thread(new Ex1RunnerC());
+		ta.start();
+		tb.start();
+		tc.start();
+	}
+}
